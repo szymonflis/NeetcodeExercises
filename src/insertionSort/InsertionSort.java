@@ -11,8 +11,11 @@ public class InsertionSort {
         List<List<Pair>> result = new ArrayList<>();
 
         for (int i = 0; i < len; i++) {
+            //second pointer creation
             int posBefore = i - 1;
+            //second pointer loops through each index in the array to compare if greater than the first pointer or not
             while (posBefore >= 0 && pairs.get(posBefore).key > pairs.get(posBefore + 1).key){
+                //Create temp pair to swap the values
                 Pair temporaryPair = pairs.get(posBefore);
                 pairs.set(posBefore, pairs.get(posBefore + 1));
                 pairs.set(posBefore + 1,temporaryPair);
