@@ -30,6 +30,7 @@ public class DynamicArray {
     }
 
     public int popback() {
+        //assume that the array is populated
         if (length > 0) {
             length--;
         }
