@@ -42,19 +42,6 @@ Note:
 The index i provided to get(int i) and set(int i) is guaranteed to be greater than or equal to 0 and less than the number of elements in the array.
 123456789101112131415161718192021222324252627282930313233343536373839404142434445
 
-public class DynamicArray {
-
-    private int[] array;
-    private int capacity;
-    private int length;
-
-    public DynamicArray(int capacity) {
-        this.capacity = capacity;
-        this.array = new int[this.capacity];
-…    public int getCapacity() {
-        return capacity;
-    }
-}
 
 Accepted
 
