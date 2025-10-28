@@ -13,6 +13,8 @@ public class MatrixBreadthFirstSearchRunner {
                              {0, 0, 0, 1},
                              {0, 1, 0, 0}};
 
+
+        //O(n * M)
         MatrixBreadthFirstSearch matrixBreadthFirstSearch = new MatrixBreadthFirstSearch();
         System.out.println(matrixBreadthFirstSearch.shortestPath(inputGrid));
 

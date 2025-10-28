@@ -12,6 +12,7 @@ public class AdjacencyListTraversalRunner {
 
         HashMap<String, ArrayList<String>> adjacencyList = new HashMap<>();
 
+        //all connections
         String[][] edges = {{"A", "B"}, {"B", "C"}, {"B", "E"}, {"C", "E"}, {"E", "D"}};
 
         for(String[] edge : edges){
@@ -30,20 +31,23 @@ public class AdjacencyListTraversalRunner {
         return adjacencyList;
     }
 
-
-
     public static void main(String[] args) {
 
         HashMap<String, ArrayList<String>> adjacencyList = buildAdjacencyList();
         HashSet<String> visits = new HashSet<>();
         DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
-
-        System.out.println(depthFirstSearch.dfs("A", "D", adjacencyList, visits));
-
-
-
+        BreadthFirstSearch breadthFirstSearch = new BreadthFirstSearch();
 
         //traversing Adjacency lists is much easier as we do not have to account for edge cases
+        //O(n^Vertices)
+        System.out.println(depthFirstSearch.dfs("A", "D", adjacencyList, visits));
+
+        //O(V + E)
+        System.out.println(breadthFirstSearch.bfs("A", "D", adjacencyList, visits));
+
+
+
+
 
     }
 }
